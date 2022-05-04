@@ -2,6 +2,8 @@
 let randomNumber = Math.trunc(Math.random() * 50) + 1;
 let checkButton = document.querySelector(".checkButton");
 
+let localHighScore = Number(localStorage.getItem("highScore"));
+
 document.querySelector(".againButton").addEventListener("click", gameReset);
 document
   .querySelector(".checkButton")
