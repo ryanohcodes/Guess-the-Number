@@ -9,6 +9,27 @@ document
   .querySelector(".checkButton")
   .addEventListener("click", compareNumbers);
 
+//script that changes the name
+const nameData = document.querySelector('#nameData')
+const changeNameButton = document.querySelector('.changeName')  
+const nameBox = document.querySelector('#nameData')
+document.querySelector('.changeName').addEventListener("click",changeName)
+
+function changeName(){
+  document.querySelector('.replies').textContent = 'What should I call you?'
+  changeNameButton.textContent = 'Call me..'
+  nameBox.classList.toggle('newName')
+  if(nameData.value != false){
+    document.querySelector('.replies').textContent = `Hello, ${nameData.value}`
+    localStorage.setItem('name',nameData.value)
+    nameBox.value = ''
+    changeNameButton.textContent = 'Actually, call me...'
+  }
+}
+
+
+
+
 function compareNumbers() {
   const guessedNumber = Number(document.querySelector(".guessedNumber").value);
 
