@@ -29,6 +29,15 @@ function changeName(){
 
 // name change script end
 
+// name recall
+
+function rememberMe(){
+  if(localStorage.getItem('name') != undefined){
+  document.querySelector('.replies').textContent = `Welcome back, ${localStorage.getItem('name')}`
+  }
+}
+rememberMe();
+
 function compareNumbers() {
   const guessedNumber = Number(document.querySelector(".guessedNumber").value);
 
