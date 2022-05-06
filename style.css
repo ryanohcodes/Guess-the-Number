@@ -121,6 +121,13 @@ header p {
 .newName{
   visibility: hidden;
 }
+#nameData{
+  width: 120px;
+  height: 40px;
+  font-size: 3rem;
+  font-family: "Amatic SC", cursive;
+  font-weight: 700;
+}
 /* name change section end */
 
 footer {

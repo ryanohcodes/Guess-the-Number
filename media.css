@@ -38,7 +38,18 @@
     /* margin-bottom: 1rem; */
     padding: 0.5rem;
   }
-
+  /* formatting for name changer */
+  .changeName{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    }
+    #nameData{
+      margin-bottom: 20px;
+    }
+    .replies {
+      margin-top: 20px;
+    }
+    /* name change section end */
   .responseSection > p {
     margin-bottom: 0;
   }

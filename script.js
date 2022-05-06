@@ -27,8 +27,7 @@ function changeName(){
   }
 }
 
-
-
+// name change script end
 
 function compareNumbers() {
   const guessedNumber = Number(document.querySelector(".guessedNumber").value);
