@@ -2,7 +2,7 @@
 let randomNumber = Math.trunc(Math.random() * 50) + 1;
 let checkButton = document.querySelector(".checkButton");
 
-let localHighScore = Number(localStorage.getItem("highScore"));
+let localHighScore = getHighScore();
 
 document.querySelector(".againButton").addEventListener("click", gameReset);
 document
@@ -37,6 +37,7 @@ function rememberMe(){
   }
 }
 rememberMe();
+document.querySelector('.highscore').textContent = localHighScore;
 
 function compareNumbers() {
   const guessedNumber = Number(document.querySelector(".guessedNumber").value);
@@ -75,7 +76,21 @@ function updateHighScore() {
   let currHighScore = Number(document.querySelector(".highscore").textContent);
   if (currScore > currHighScore) {
     document.querySelector(".highscore").textContent = currScore;
+    setNewHighscore(currScore);
   }
+}
+
+function getHighScore () {
+  if (!localStorage.getItem("highscore")) {
+    localStorage.setItem("highscore", 0);
+    return 0;
+  } else {
+    return localStorage.getItem("highscore");
+  }
+}
+
+function setNewHighscore(score) {
+  localStorage.setItem('highscore', score);
 }
 
 function gameReset() {
